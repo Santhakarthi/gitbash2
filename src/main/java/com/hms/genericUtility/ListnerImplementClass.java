@@ -41,15 +41,7 @@ public class ListnerImplementClass implements ITestListener{
 	}
 	@Override
 	public void onTestFailure(ITestResult result) {
-	TakesScreenshot ts=(TakesScreenshot)BaseClass.sdriver;
-	File src=ts.getScreenshotAs(OutputType.FILE);
-	File dst=new File("./Screenshot/Failedscript.png");
-	try {
-		FileUtils.copyFile(src, dst);
-	} catch (IOException e) {
 	
-		e.printStackTrace();
-	}
 	String MethodName=result.getMethod().getMethodName();
 	
 	 
